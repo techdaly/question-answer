@@ -1,0 +1,13 @@
+<h1>Welcome to QuestionAnswer</h1>
+
+Please keep it appropriate.
+
+<ul>
+  {{#each model as |question|}}
+    <li>
+      <div id="q-title">{{question.title}}</div><br>
+      <div id="q-asker">{{question.asker}}</div><br>
+      {{question.qtext}}<br><br>
+    </li>
+  {{/each}}
+</ul>

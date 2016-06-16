@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: 'AIzaSyAq01YClS4guNmYt9iyOdCq_YKkLbQiXDE',
+      authDomain: 'question-answer-3fc4f.firebaseapp.com',
+      databaseURL: 'https://question-answer-3fc4f.firebaseio.com',
+      storageBucket: 'question-answer-3fc4f.appspot.com',
+    },
     modulePrefix: 'question-answer',
     environment: environment,
     baseURL: '/',
