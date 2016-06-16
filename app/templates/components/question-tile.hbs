@@ -1,11 +1,12 @@
 <li>{{#link-to 'question' question.id}}
   <div id="q-title">{{question.title}}</div><br>
-  <div id="q-asker">{{question.asker}}</div><br><br>
   {{/link-to}}
+  <div id="q-asker">{{question.asker}}</div><br><br>
 
   {{#if isQTextShowing }}
     <p {{action 'qtextHide'}}>{{question.qtext}}</p>
   {{else}}
     <button {{action 'qtextShow'}}>Show Question</button>
   {{/if}}
+  <hr>
 </li>
