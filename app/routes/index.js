@@ -13,12 +13,6 @@ export default Ember.Route.extend({
       var newQuestion = this.store.createRecord('question', qparams);
       newQuestion.save();
       this.transitionTo('index');
-    },
-
-    savea(aparams) {
-      var newAnswer = this.store.createRecord('answer', aparams);
-      newAnswer.save();
-      this.transitionTo('index');
-    },
+    }
   }
 });

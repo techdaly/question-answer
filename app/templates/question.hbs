@@ -5,3 +5,13 @@
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
 
 {{update-question question=model update="update"}}
+
+
+<h2>Answers</h2>
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
+
+{{new-answer savea="savea"}}

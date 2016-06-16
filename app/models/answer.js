@@ -4,5 +4,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   responder: DS.attr(),
-  atext: DS.attr()
+  atext: DS.attr(),
+  question: DS.belongsTo('question', { async: true })
 });
