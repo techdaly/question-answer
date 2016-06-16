@@ -1,0 +1,9 @@
+<li>
+  <div id="q-title">{{question.title}}</div><br>
+  <div id="q-asker">{{question.asker}}</div><br><br>
+  {{#if isQTextShowing }}
+    <p {{action 'qtextHide'}}>{{question.qtext}}</p>
+  {{else}}
+    <button {{action 'qtextShow'}}>Show Question</button>
+  {{/if}}
+</li>
