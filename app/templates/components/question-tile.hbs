@@ -1,4 +1,5 @@
 <li>{{#link-to 'question' question.id}}
+  <hr>
   <div id="q-title">{{question.title}}</div><br>
   {{/link-to}}
   <div id="q-asker">{{question.asker}}</div><br><br>
@@ -8,5 +9,4 @@
   {{else}}
     <button {{action 'qtextShow'}}>Show Question</button>
   {{/if}}
-  <hr>
 </li>
