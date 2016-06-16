@@ -3,7 +3,7 @@
 Please keep it appropriate.
 
 <ul>
-  {{#each model as |question|}}
+  {{#each model.questions as |question|}}
     {{question-tile question=question}}
   {{/each}}
 </ul>
@@ -16,3 +16,5 @@ Please keep it appropriate.
     <li>{{answer.atext}}</li>
   {{/each}}
 </ul>
+
+{{new-answer savea="savea"}}
