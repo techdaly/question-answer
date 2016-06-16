@@ -12,6 +12,16 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+    update(question, qparams){
+      Object.keys(qparams).forEach(function(key){
+        if(qparams[key]!==undefined){
+          question.set(key,qparams[key]);
+        }
+      });
+      question.save();
+      this.transitionTo('index');
+    },
+
     destroyQuestion(question) {
       question.destroyRecord();
       this.transitionTo('index');

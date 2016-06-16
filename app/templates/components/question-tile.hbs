@@ -6,5 +6,6 @@
   {{else}}
     <button {{action 'qtextShow'}}>Show Question</button>
   {{/if}}
+  {{update-question question=question update="update"}}
   <button {{action 'delete' question}}>Delete</button>
 </li>
