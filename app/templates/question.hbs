@@ -10,6 +10,7 @@
 <h2>Answers</h2>
 <ul>
   {{#each model.answers as |answer|}}
+  {{answer.responder}}
     {{answer-tile answer=answer}}
   {{/each}}
 </ul>
