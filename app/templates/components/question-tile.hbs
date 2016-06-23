@@ -1,6 +1,6 @@
-<li>{{#link-to 'question' question.id}}
-  <hr>
-  <div id="q-title">{{question.title}}</div><br>
+<li><hr> {{#link-to 'question' question.id}}
+
+  <div id="q-title">{{question-popularity question}}{{question.title}}</div><br>
   {{/link-to}}
   <div id="q-asker">{{question.asker}}</div><br><br>
 
