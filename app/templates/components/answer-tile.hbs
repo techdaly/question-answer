@@ -1,11 +1,8 @@
 <li>
-  In response to {{answer.question.title}}:
-  <br><em>{{answer.responder}}</em> <br>
-  {{answer.atext}}
+  <hr>
+  {{fullAnswer}}
+  <h3>{{answer.atext}}</h3>
 </li>
 
 {{update-answer answer=answer update="update"}}
 <br><button {{action 'delete' answer}}>Delete Answer</button>
-
-
-{{log model}}
