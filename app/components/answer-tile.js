@@ -6,10 +6,10 @@ export default Ember.Component.extend({
   fullAnswer: Ember.computed('answer.question.title', 'answer.responder', function(){
     return this.get('answer.responder') + ' ::: ' + this.get('answer.question.title');
   }),
-  
+
   actions: {
     addToList(item) {
-      this.get(favoritesList).add(item);
+      this.get('favoritesList').add(item);
     },
 
     delete(answer){
