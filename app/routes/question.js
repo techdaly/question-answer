@@ -14,10 +14,19 @@ export default Ember.Route.extend({
       question.save();
       this.transitionTo('index');
     },
-    
+
     destroyQuestion(question) {
-      question.destroyRecord();
+      var answer_deletions = question.get('answers').map(function(answer) {
+    return answer.destroyRecord();
+  });
+  Ember.RSVP.all(answer_deletions).then(function() {
+    return question.destroyRecord();
+  });
       this.transitionTo('index');
+    },
+
+    destroyAnswer(answer) {
+      answer.destroyRecord();
     },
 
     savea(aparams) {
@@ -27,7 +36,6 @@ export default Ember.Route.extend({
       newAnswer.save().then(function(){
         return question.save();
       });
-      this.transitionTo('question', qparams.question);
     }
 
   }
