@@ -1,0 +1,19 @@
+{{#if updateAnswerForm}}
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="responder">Username</label>
+          {{input value=responder id="responder" placeholder=answer.responder}}
+        </div>
+
+        <div class="form-group">
+          <label for="atext">Answer</label>
+          {{input value=atext id="atext" placeholder=answer.atext}}
+        </div>
+
+        <button {{action 'update' answer}}>Save</button>
+      </form>
+    </div>
+{{else}}
+  <button {{action 'updateAnswerForm'}}>Edit Answer</button>
+{{/if}}

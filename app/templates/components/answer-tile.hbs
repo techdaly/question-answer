@@ -3,3 +3,9 @@
   <br><em>{{answer.responder}}</em> <br>
   {{answer.atext}}
 </li>
+
+{{update-answer answer=answer update="update"}}
+<br><button {{action 'delete' answer}}>Delete Answer</button>
+
+
+{{log model}}

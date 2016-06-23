@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       question.save();
       this.transitionTo('index');
     },
+    
     destroyQuestion(question) {
       question.destroyRecord();
       this.transitionTo('index');
@@ -21,8 +22,12 @@ export default Ember.Route.extend({
 
     savea(aparams) {
       var newAnswer = this.store.createRecord('answer', aparams);
-      newAnswer.save();
-      this.transitionTo('index');
+      var question = aparams.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function(){
+        return question.save();
+      });
+      this.transitionTo('question', qparams.question);
     }
 
   }

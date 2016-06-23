@@ -1,17 +1,18 @@
 <div id="q-title">{{model.title}}</div>
 <div id="q-asker">{{model.asker}}</div>
+<div>{{model.qtext}}</div>
 
-
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
-
+<hr>
 {{update-question question=model update="update"}}
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
+<hr>
 
 {{log model.answers.length}}
 <h2>Answers</h2>
 <ul>
   {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer}}
+    {{answer-tile answer=answer }}
   {{/each}}
 </ul>
 
-{{new-answer savea="savea"}}
+{{new-answer savea="savea" question=model}}

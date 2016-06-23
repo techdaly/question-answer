@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var aparams = {
         responder: this.get('responder'),
         atext: this.get('atext'),
+        question: this.get('question')
       };
       this.set('addNewAnswer', false);
       this.sendAction('savea', aparams);
